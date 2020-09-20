@@ -1,0 +1,69 @@
+<style>
+   .header{
+      width: 100%; 
+      height: 25px;
+      font-size: 2.3em;
+      opacity: 0.6;
+   }
+   
+   .close_icon_img{
+      float: right; 
+      height: 25px;
+   }
+   
+   .article-wrapper{
+      border: none !important;
+      box-shadow: none !important;
+   }
+   
+   #item_photo_img{
+      width: auto !important;
+   }
+   
+   .form{
+      min-height: 600px;
+   }
+</style>
+
+<div class="header">
+      Быстрый просмотр объявления<a onclick="form.close()" href="javascript:void(0)"><img class="close_icon_img" src="./img/close_icon.png" /></a>
+   </div>
+<div class="article-wrapper">
+   <div class="article-header-wrapper">
+      <div id="article_header" class="article-header"><h1></h1></div>
+   </div>
+   <div class="article-middle">
+      <div class="article-content">
+         <div class="photos-wrapper" style="cursor: pointer;" onclick="slider.right()">
+            <div class="main-photo qview" style="overflow: hidden;height: 54vh;text-align: center;">
+               <a id="main_image_wrapper_div" class="openPhotoModal qview"></a>
+                  <!--<a href="javascript:void(0)" onclick="slider.left()"><img src="img/left-arrow_white.png" class="left_arrow" /></a>
+                  <a href="javascript:void(0)" onclick="slider.right()"><img src="img/right-arrow_white.png" class="right_arrow" /></a>-->
+            </div>
+         </div>
+         <table id="specs_table">
+            <tr>
+               <td id="td0"><span class="key" id="key"></span><br><span id="value"></span></td>
+               <td id="td1"><span class="key" id="key"></span><br><span id="value"></span></td>
+               <td id="td2"><span class="key" id="key"></span><br><span id="value"></span></td>
+               <td id="td3"><span class="key" id="key"></span><br><span id="value"></span></td>
+            </tr>
+         </table>
+         <div id="article_description" class="article-description"></div>
+      </div>
+      <div class="sidebar article-sidebar">
+         <div class="sidebar-content article-sidebar-content">
+            <div id="article_price" class="price"></div>
+            <div class="">
+               <div class="seller-wrapper pad">
+                  <div id="item_cond_div" style="width:100%"><span style="color:#777">Состояние: </span></div>
+                  <div id="author_name_div" style="width:100%"><span style="color:#777">Автор: </span><a id="author_name_a" href="javascript:void(0)"></a></div>
+                  <div id="item_address_div" style="width:100%"><span style="color:#777">Адрес: </span><a id="item_address_a" href="javascript:void(0)"></a></div>
+                  <div id="author_phone_div" style="width:100%"><span style="color:#777">Телефон: </span><a href="javascript:void(0)" onclick="item.showPhone(this)">показать</a></div>
+                  <a id="full_view_a" class="btn transparent orange fw">Открыть полностью</a>
+                  <a id="add_to_favorites_a" href="javascript:void(0)" class="btn transparent grey fw">Добавить в избранное</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,181 @@
+/* autocomplete (при выборе региона)
+ul.autocomplete {
+    position: absolute; overflow: hidden;
+    background-color: #fff; border: 1px solid #E0E0E0;
+    top: 33px; padding: 0px; font-weight: normal;
+    list-style: none; display:none; z-index:1000;
+}
+ul.autocomplete li {
+  display: block; padding: 2px 5px; margin: 0px;
+  overflow: hidden; width: 100%;
+  cursor: pointer; color: #073666;
+}
+ul.autocomplete li span.grey { color: grey; font-size: 12px; }
+ul.autocomplete li.hovered, ul.autocomplete li:hover { background-color: #F1F1F1; }
+input.autocomplete { border-color: #3399cc;}
+input.autocomplete-progress {
+  background:url("../img/progress-mini.gif") no-repeat scroll 95% center transparent;
+  -webkit-transition-property: background-image;
+  -moz-transition-property: background-image;
+  -o-transition-property: background-image;
+  transition-property: background-image;
+  -webkit-transition-duration: 0;
+  -moz-transition-duration: 0;
+  -o-transition-duration: 0;
+  transition-duration: 0;
+}
+*/
+.container ul.autocomplete{
+    padding:0;
+    display: block;
+}
+.container ul.autocomplete li{
+    list-style: none;
+
+}
+.container ul.autocomplete li a {
+    margin: 0 20px;
+    display: block;
+    padding: 3px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333;
+    font-size: 1.3em;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.container ul.autocomplete li:hover,
+.container ul.autocomplete li:focus{
+    text-decoration: none;
+    background: #ddd;
+    cursor: pointer;
+}
+/* подсветка незполненных полей красным цветом */
+input.input-error, select.input-error, textarea.input-error {
+    border-color: #FFB9BA;
+    -webkit-transition-property: border-color;
+    -moz-transition-property: border-color;
+    -o-transition-property: border-color;
+    transition-property: border-color;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+/* поиск по подкатегории, вторая выпадайка подкатегории, при наличии третьего уровня вложенности */
+a.in_cat_button2 {
+    font-size: 1.192307692em;
+}
+/* поиск по подкатегории, подсветка активной подкатегории */
+ul.sb-sub-cats li a.active {
+    font-weight: bold;
+}
+/* фильры поиска: корректное отображение select'a */
+#filter .sb-box select {
+    margin:0;
+    display:inline;
+    top: 0;
+}
+
+/* убрать text-shadow ссылок вида списка */
+.sort-type a.active-sort {
+    text-shadow: none;
+}
+
+/* контакты пользователя */
+ul.ob-contacts {
+    margin: 0;
+}
+
+/* раздел помощь */
+.help-post {
+    padding-left: 0;
+}
+.blog-cats ul li a.active {
+    font-weight: bold;
+}
+
+/* вспомогательные классы */
+.left {float:left;}
+.right {float:right;}
+.disabled {opacity: 0.4;}
+/* alert - global */
+#alert_width_wrapper {
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+}
+
+#alert_wrapper {
+    max-width: 940px;
+    min-width: 280px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+#alert_global {
+    padding-top: 17px;
+    padding-left: 25px;
+    background: #e1ffb9 url(../img/alert-success.jpg) repeat-x 0 0;
+    border: 1px solid #C1DDB2;
+    text-shadow: 0 1px 0 white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 4px white;
+    -moz-box-shadow: inset 0 0 4px white;
+    box-shadow: inset 0 0 4px white;
+    color: #4d6642;
+    z-index: 5;
+
+}
+
+
+#alert_global p {
+    font-size: 0.9em!important;
+}
+
+#alert_global div {
+    color: #4d6642;
+    font-family: 'myriad_pro_regular';
+    font-size: 1.1em;
+    margin: 0;
+}
+
+#alert_global:before {
+    content: '';
+    background: url(../img/sprites-new.png) no-repeat -55px -45px;
+    position: relative;
+    width: 43px;
+    height: 43px;
+    z-index: 500;
+    float: left;
+    margin-right: 20px;
+}
+
+
+
+#alert_global.alert-error {
+    background: #ffd1d1 url(../img/alert-error.jpg) repeat-x 0 0;
+    border-color: #FFB9BA;
+    color: #704444;
+}
+
+#alert_global.alert-error div {
+    color: #704444;
+}
+
+#alert_global.alert-error:before {
+    background-position: -100px -45px;
+    width: 45px;
+    height: 44px;
+}
+
+.pluso {
+    left: 0px !important;
+    position: fixed !important;
+    top: 92px !important;
+}

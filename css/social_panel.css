@@ -1,0 +1,30 @@
+.pluso_link{
+   background: rgba(0, 0, 0, 0) url("../img/social_buttons.png") repeat scroll 0 0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 40px;
+    margin: 0 14px 0 0;
+    width: 40px;
+}
+
+.pluso__vkontakte{
+   background-position: -168px 0;
+}
+
+.pluso__odnoklassniki{
+   background-position: -126px 0;
+}
+
+.pluso__facebook{
+   background-position: 0 0;
+}
+
+.pluso__twitter{
+   background-position: -42px 0;
+}
+
+.pluso__moimir{
+   background-position: -294px 0;
+}

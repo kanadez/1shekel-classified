@@ -1,0 +1,17 @@
+<div class="form_header_wrapper">
+   <div class="header">
+      <span id="title">Пожаловаться на объявление</span><a onclick="form.close()" href="javascript:void(0)"><img class="close_icon_img" src="./img/close_icon.png" /></a>
+   </div>
+</div>
+<div id="form_content">
+   <input type="radio" name="personal_status_input" id="personal_status1_input" class="css-radio radGroup1" value="0" />
+   <label for="personal_status1_input" class="css-label-radio css-label-radio2 radGroup1">Спам</label>
+   <br><input type="radio" name="personal_status_input" id="personal_status2_input" class="css-radio radGroup1" value="1" />
+   <label for="personal_status2_input" class="css-label-radio css-label-radio2 radGroup1">Неверная рубрика</label>
+   <br><input type="radio" name="personal_status_input" id="personal_status3_input" class="css-radio radGroup1" value="2" />
+   <label for="personal_status3_input" class="css-label-radio css-label-radio2 radGroup1">Запрещенный товар/услуга</label>
+   <br><input type="radio" name="personal_status_input" id="personal_status4_input" class="css-radio radGroup1" value="3" />
+   <label for="personal_status4_input" class="css-label-radio css-label-radio2 radGroup1">Мошенник</label>
+   
+   <a id="send_report_a" class="btn transparent blue fw" onclick="item.sendReport()">Отправить жалобу</a>
+</div>

@@ -1,0 +1,24 @@
+.block_wrapper .input{
+   width:56%;
+}
+.css-label-radio2 {
+    margin: 15px 25px 15px 20px !important
+}
+
+#phone_input{
+   width: 197px;
+}
+
+#register_button{
+   margin-right: 91px;
+   width: 44% !important;
+}
+
+.neccesary  {
+   font-weight: bold !important;
+}
+
+.alert{
+   margin-left: 79px;
+   width: 84%;
+}

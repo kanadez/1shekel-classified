@@ -1,0 +1,68 @@
+<style>
+   .seller-wrapper .header{
+      width: 100%; 
+      height: 25px;
+      font-size: 2.3em;
+      opacity: 0.6;
+   }
+   
+   .close_icon_img{
+      float: right; 
+      height: 25px;
+   }
+   
+   .seller-wrapper .contact-form-table{
+      margin-top: 10px;
+   }
+   
+   #message-int-mail{
+      height: 100px; 
+      resize: none;
+   }
+   
+   #contact_form_send_button{
+      font-size: 2.3em;
+   }
+   
+   #contact_form_email_input{
+      font-size: 2.3em;
+      padding: 9px;
+      width: 100%;
+   }
+</style>
+<div class="seller-wrapper">
+   <div class="header">
+      <span id="title">Новое сообщение автору</span><a onclick="form.close()" href="javascript:void(0)"><img class="close_icon_img" src="./img/close_icon.png" /></a>
+   </div>
+   <div class="table contact-form-table">
+      <div class="userpic">
+         <img id="contact_form_userpic_img" src="./user/default_user.png" width="44" height="42">
+      </div>
+      <div class="txt">
+         <a id="contact_form_seller_name" class="seller-name" href=""></a>
+         <div id="contacts_grey" class="user-contacts">
+            <div>
+               <a href="javascript:void(0)" onclick="author.contactFormShowPhone(this)">Показать номер телефона</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<form action="" id="messages_bottom_form">
+   <div class="contact-form">
+      <input class="inactive" placeholder="Ваш E-Mail" type="text" id="contact_form_email_input" name="email" value="" maxlength="100">
+      <textarea id="contact_form_message_area" name="message" onchange="item.checkMinusWords(this)" class="inactive" placeholder="Ваше сообщение.."></textarea>
+      <br><span class="input_error minus_words_error" id="contact_form_minus_words_error">Текст сообщения не должен содержать нецензурные выражения, ссылки, и быть на русском языке.</span>
+      <div class="contact-form-controls">
+         <div class="table">
+            <div class="table-cell" style="width:220px">
+               <nowrap>
+                  <a id="contact_form_send_button" class="btn transparent blue send_button" onclick="item.contactFormSendMessage()">Отправить</a>
+               </nowrap>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+   </div>
+   <input type="hidden" name="hash" value="undefined">
+</form>

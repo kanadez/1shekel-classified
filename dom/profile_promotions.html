@@ -1,0 +1,66 @@
+<style>
+ul.menu {
+   background: #fff none repeat scroll 0 0;
+   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.267);
+   display: none;
+   margin-top: -10px;
+   max-height: 350px;
+   width: 40%;
+   overflow-y: scroll;
+   position: absolute;
+   text-align: left;
+   z-index: 1000;
+}
+
+ul.menu li{
+   padding:10px 15px 10px 15px;
+   
+   margin:0 !important;
+}
+
+ul.menu li:hover{
+   cursor:pointer;
+   background:#eee;
+   text-decoration:none;
+   color:#555;
+}
+
+ul.menu li a{
+   text-decoration:none;
+   color:#999;
+}
+</style>
+<div class="header_centered">Объявления для продвижения</div>
+<div class="divider"></div>
+<div style="margin-top:20px;">
+   Здесь Вы можете зарабатывать баллы, которые затем тратить на продвижение собственных объявлений. Чтобы заработать баллы, сделайте перепост одного или нескольких объявлений из списка ниже. Оно появится на Вашей странице в соц. сетях.
+</div>
+<div style="width: 39%; float:left;">
+   <label class="dropdown_label neccesary" for="promotions_category_input">Категория: </label>
+   <input id="promotions_category_input" style="width:68%" class="dropdown_input" placeholder="Выберите" onkeyup="category.findCategory('promotions_category_input','promotions_category_list')" onfocus="profile.fillPromotionsCategoryList()" name="promotions_category_input">
+   <i class="caret"></i>
+   <br><ul class="menu" style="margin-left: 71px;width: 171px;" role="menu" id="promotions_category_list">
+   </ul>
+</div>
+<div style="width: 39%; float:left;margin-left:20px">
+   <label class="dropdown_label" for="promotions_city_input">Город: </label>
+   <input id="promotions_city_input" class="dropdown_input" style="width:78%" placeholder="Начните вводить" onkeyup="region.findCity('promotions_city_input','promotions_city_list')" onfocus="profile.fillPromotionsCityList()" name="promotions_city_input">
+   <i class="caret"></i>
+   <br><ul class="menu" style="margin-left: 48px; width: 195px;" role="menu" id="promotions_city_list">
+   </ul>
+</div>
+<a class="repost_btn" href="javascript:void(0)" style="margin-left: 15px;margin-top: 12px;" onclick="profile.getPromotions(profile.page)">Фильтровать</a>
+<div class="profile_promotions_wrapper" style="margin-top:20px">
+   <table class="centered_table" id="profile_promotions_table">
+   </table>
+</div>
+<center style="clear:both">
+<ul id="profile_items_pagination" class="pagination">
+<li>
+<a class="disabled" href="javascript:void(0)" onclick="profile.getItems(1);" style="font-weight : bolder">1</a>
+</li>
+<li>
+<a href="javascript:void(0)" onclick="profile.getItems(2);">2</a>
+</li>
+</ul>
+</center>

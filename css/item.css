@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+a{
+   color: #2B587A;
+}
+
+.image_circled{
+   border-radius: 35px;
+    height: 50px;
+
+    overflow: hidden;
+    width: 50px;
+}
+
+#write_comment_button{
+   padding:10px 22px;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -15px;
+}
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left: 20px;
+    height: 15px;
+    display: inline-block;
+    line-height: 15px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+    color:#000;
+}
+.lite-gray-check {
+    background-image: url(../img/lite-gray-check.png);
+}
+
+label.css-label {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+input[type=radio].css-radio {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=radio].css-radio + label.css-label-radio {
+	padding-left:24px;
+	height:19px; 
+	display:inline-block;
+	line-height:19px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:1em;
+	vertical-align:middle;
+	cursor:pointer;
+   margin: 15px 20px 15px 26px;
+   color:#000;
+}
+
+input[type=radio].css-radio:checked + label.css-label-radio {
+	background-position: 0 -19px;
+}
+label.css-label-radio {
+   background-image:url(../img/radio.png);
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.css-label-radio2{
+   margin: 15px 35px 15px 0 !important
+}
+
+#photos_queue_div{
+    width: 100%;
+    display: flex;
+    padding-top: 20px;
+    height: 70px;
+    margin: 0 0 30px 20px;
+}
+
+#photos_queue_div > div{
+    width: 30px;
+    border: 1px solid #eee;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+    display: inline-table;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#photos_queue_div > div:hover{
+    opacity: .8;
+}
+
+#photos_queue_div > div > img{
+    height: 60px;
+}
+
+#contact_form_minus_words_error{
+    font-size: 2em;
+}

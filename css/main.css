@@ -1,0 +1,115 @@
+*{
+    outline: medium none;
+    box-sizing: border-box;
+}
+
+table {
+    background-color: transparent;
+    max-width: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+div.table {
+    background-color: transparent;
+    display: table !important;
+}
+.table {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.navbar {
+    padding: 0;
+    height: 50px;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+    background: #666;
+    z-index: 1034 !important;
+    transition: all .2s;
+    opacity: 0.7;
+}
+
+.navbar > .navbar-brand, .navbar > .navbar-block, .navbar .btn-add {
+    height: 60px !important;
+    line-height: 60px !important;
+}
+
+.navbar.min {
+    height: 46px;
+    min-height: 46px !important;
+}
+.navbar.min > .navbar-brand, .navbar.min > .navbar-block {
+    height: 46px !important;
+    line-height: 46px !important;
+}
+
+.navbar.min .btn-add {
+    height: 45px !important;
+    line-height: 45px !important;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: left;
+    vertical-align: top;
+    float: left;
+}
+
+.clearfix:before,.clearfix:after{
+   display:table;
+   content:" ";
+}
+.clearfix:after{
+   clear:both;
+}
+
+.main-wrapper {
+    margin-top: 128px;
+    padding-bottom:20px;
+    min-height: 158px;
+    margin-top: 80px;
+    padding-bottom: 40px;
+    max-width: 869px;
+}
+
+.footer {
+    background: #e5e5e5 none repeat scroll 0 0;
+    border-top: 1px solid #cccccc;
+    min-width: 100%;
+    overflow: hidden;
+    padding: 40px 0 0;
+    position: absolute;
+    text-align: center;
+    width: auto;
+}
+
+
+#service-description {
+    display: block;
+    margin: 0 auto;
+}
+.text-muted {
+    color: #999;
+}
+
+.footer #social{
+   margin-left: auto;
+   margin-right: auto;
+   width: 20%;
+}
+
+#copyr_div {
+    font-size: 2.3em;
+    margin: 20px 0;
+    opacity: 0.7;
+}
+
+#counter_dummy_img{
+   float:right;
+   margin: -46px 26px 20px 0;
+}

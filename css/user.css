@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main-wrapper{
+   max-width:1024px;
+   margin-top:50px !important;
+   padding-bottom: 20px !important;
+}
+
+#userdata_wrapper{
+   width:100%;
+   height:200px;
+}
+
+#userphoto{
+   height:150px;
+   margin:60px 10px 10px 21px;
+   float:left;
+}
+
+#userdata{
+   font-size:2.3em;
+   float:left;
+   color:#555;
+   margin: 60px 10px 10px 10px;
+   width:30%;
+}
+
+#username{
+   font-size:1.2em;
+}
+
+.username_param{
+   opacity:0.8;
+}
+
+#report_user{
+   width: 70% !important;
+   margin-bottom:-50px;
+}
+
+.light_shadow{
+   -webkit-box-shadow:rgba(0, 0, 0, 0.509804) 0px 0px 2px 0px;
+   -moz-box-shadow:rgba(0, 0, 0, 0.509804) 0px 0px 2px 0px;
+   box-shadow:rgba(0, 0, 0, 0.509804) 0px 0px 2px 0px;
+}
+
+#useritems_header{
+   width:100%;
+   height:50px;
+}
+
+.useritem_cat_link{
+   float: left;
+   margin-left: 20px;
+}
+
+#useritems_cats_list{
+   float: left;
+   width: 85%;
+   height: 30px;
+   line-height:30px;
+   font-size: 2.3em;
+}
+
+#switch_view{
+   margin: 10px;
+}
+
+#useritems_wrapper{
+   width: 100%;
+   clear: both;
+   margin-top:10px;
+   margin-left:auto;
+   margin-right:auto;
+}
+
+.footer{
+   position: relative !important;
+}
+
+#items-renderer.thumbnails .item-wrapper{
+   width:25% !important; 
+}
+
+.item{
+   border-width:0px !important;
+   -webkit-box-shadow:rgba(0, 0, 0, 0.258824) 0px 0px 4px 0px !important;
+   -moz-box-shadow:rgba(0, 0, 0, 0.258824) 0px 0px 4px 0px !important;
+   box-shadow:rgba(0, 0, 0, 0.25) 0px 0px 4px 0px !important;
+   -webkit-border-radius:0px !important;
+   -moz-border-radius:0px !important;
+   border-radius:0px !important;
+}
+
+.btn.transparent{
+   
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span{
+   border-radius:0;
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span{
+   border-radius:0;
+}
+
+.white_link{
+   color: #000 !important;
+}

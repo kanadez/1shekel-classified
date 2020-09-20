@@ -1,0 +1,66 @@
+<style>
+   
+   .pluso_link{
+      background: url('./img/social_buttons.png');
+      width: 40px;
+      height: 40px;
+      float: left;
+      display: inline-block;
+      cursor: pointer;
+      margin: 0 5px 0 0;
+   }
+   
+   .pluso__vkontakte{
+      background-position: -168px 0;
+   }
+   
+   .pluso__odnoklassniki{
+      background-position: -126px 0;
+   }
+   
+   .pluso__facebook{
+      background-position: 0 0;
+   }
+   
+   .pluso__twitter{
+      background-position: -42px 0;
+   }
+   
+   .pluso__moimir{
+      background-position: -294px 0;
+   }
+   
+   .share_form_header_wrapper .header{
+      width: 100%; 
+      height: 25px;
+      font-size: 2.3em;
+   }
+   
+   .share_form_header_wrapper .close_icon_img{
+      float: right; 
+      height: 25px;
+   }
+</style>
+<div class="share_form_header_wrapper">
+   <div class="header">
+      <span id="title">Поделиться объявлением</span><a onclick="form.close()" href="javascript:void(0)"><img class="close_icon_img" src="./img/close_icon.png" /></a>
+   </div>
+</div>
+<div style="margin-top:10px; font-size:2.3em;">Поделитесь данным объявлением в одной или нескольких социальных сетях, и заработайте баллы на продвижение собственных товаров. За репост в одну соц. сеть дается 1 балл. В день разрешается сделать не более 20 репостов.</div>
+<div id="shareform" class="pluso-sharer  pluso--theme11 pluso--square-corner pluso--big pluso--horizontal pluso--multiline " style="background:transparent;margin-top:25px;margin-left: 59px;">
+   <a id="sf_vkontakte" to="1" class="pluso__vkontakte pluso_link " title="ВКонтакте" style="" target="_blank">
+      <span data-id="vkontakte" class="pluso-btns-hover"></span>
+   </a>
+   <a id="sf_odnoklassniki" to="2" class="pluso__odnoklassniki pluso_link " title="Одноклассники" style="" target="_blank">
+      <span data-id="odnoklassniki" class="pluso-btns-hover"></span>
+   </a>
+   <a id="sf_facebook" to="3" class="pluso__facebook pluso_link " title="Facebook" style="" >
+      <span data-id="facebook" class="pluso-btns-hover"></span>
+   </a>
+   <a id="sf_twitter" to="4" class="pluso__twitter pluso_link " title="Twitter" style="" target="_blank" >
+      <span data-id="twitter" class="pluso-btns-hover"></span>
+   </a>
+   <a id="sf_moimir" to="6" class="pluso__moimir pluso_link  second-line" title="Мой Мир@Mail.Ru" style="" target="_blank" >
+      <span data-id="moimir" class="pluso-btns-hover"></span>
+   </a>
+</div>

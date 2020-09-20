@@ -1,0 +1,93 @@
+<h4 class="header_centered">Новое объявление</h4>
+
+<div class="header">Описание</div>
+<div class="divider"></div>
+<div id="description_alert" class="alert"></div>
+<div class="block_wrapper">
+   <label for="title_input" class="neccesary">*Заголовок: </label><input id="title_input" maxlength=100 name="title_input" onchange="newitem.checkMinusWords(this)" class="neccesary_input" />
+   <br><span class="input_error minus_words_error" id="title_input_minus_words_error_span">Текст заголовка не должен содержать нецензурные выражения, ссылки, и быть на русском языке.</span>
+   <br><label id="short_desc_input_label" for="short_desc_input" class="neccesary">*Краткое описание: </label><textarea id="short_desc_input" class="neccesary_input" onchange="newitem.checkMinusWords(this)" maxlength=100 name="short_desc_input"></textarea>
+   <br><span class="input_error minus_words_error" id="short_desc_input_minus_words_error_span">Текст краткого описания не должен содержать нецензурные выражения, ссылки, и быть на русском языке.</span>
+   <br><label id="full_desc_input_label" for="full_desc_input">Полное описание: </label><textarea id="full_desc_input" maxlength=5000 onchange="newitem.checkMinusWords(this)" name="full_desc_input"></textarea>
+   <br><span class="input_error minus_words_error" id="full_desc_input_minus_words_error_span">Текст описания не должен содержать нецензурные выражения, ссылки, и быть на русском языке.</span>
+   <br><label for="price_input" class="neccesary">*Цена: </label><input id="price_input" class="neccesary_input" maxlength=20 name="price_input" />
+   <select name="price_select" id="price_select"></select>
+   <br><label for="price_input">Дополнительно: </label>
+   <input type="checkbox" class="css-checkbox" style="display:none;" id="auction_check" /><label for="auction_check" class="css-label lite-gray-check">Торг</label>
+   <input type="checkbox" onchange="newitem.lockPrice()" class="css-checkbox" style="display:none;" id="gift_check" /><label for="gift_check" class="css-label lite-gray-check">Даром</label>
+   <input type="checkbox" class="css-checkbox" style="display:none;" id="exchange_check" /><label for="exchange_check" class="css-label lite-gray-check">Обмен</label>
+   <br><label for="item_status_input">Состояние: </label>
+   <input type="radio" name="item_status_input" id="item_status1_input" class="css-radio radGroup2" value="1"/><label for="item_status1_input" class="css-label-radio radGroup2">Нового</label>
+   <input type="radio" name="item_status_input" id="item_status2_input" class="css-radio radGroup2" value="2"/><label for="item_status2_input" class="css-label-radio radGroup2">Бывшего в употреблении</label>
+   <br>
+   <table id="photos_table">
+      <tr>
+         <td id="photo0"></td>
+         <td id="photo1"></td>
+         <td id="photo2"></td>
+         <td id="photo3"></td>
+      </tr>
+   </table>
+   <br><div id="upload_alert" class="alert" style="float: right; width:50%; display:none;margin-left:2px">Размер файла больше 1 МБ! Выберите другой.</div>
+   <br><label id="photo_upload_label" for="photo_input" style="margin-right: 326px;margin-top:10px">Фото: </label><a href="javascript:void(0)" id="item_photo_upload_a" onclick="" class="btn transparent blue">Загрузить</a>
+</div>
+
+<div class="header">Категория каталога</div>
+<div class="divider"></div>
+<div id="category_alert" class="alert"></div>
+<div class="block_wrapper">
+   <label for="category_input" class="dropdown_label neccesary">*Категория: </label><input class="dropdown_input neccesary_input" id="category_input" name="category_input" onfocus="newitem.fillCategoryList()" onkeyup="category.findCategory('category_input','category_list')"/>
+   <i class="caret"></i>
+   <br><ul class="menu" role="menu" id="category_list">
+   </ul>
+   <label for="subcategory_input" class="dropdown_label">Подкатегория: </label><input class="dropdown_input" id="subcategory_input" name="subcategory_input" onfocus="newitem.fillSubCategoryList()" onkeyup="category.findSubCategory('subcategory_input','subcategory_list')"/>
+   <i class="caret"></i>
+   <br><ul class="menu" role="menu" id="subcategory_list">
+   </ul>
+   <div class="br_up"></div>
+   <br><label id="advsubcategory_input_label" for="advsubcategory_input" class="dropdown_label">Марка/Тип товара: </label><input class="dropdown_input" id="advsubcategory_input" name="advsubcategory_input" onfocus="newitem.fillAdvSubCategoryList()" onkeyup="category.findAdvSubCategory('advsubcategory_input','advsubcategory_list')"/>
+   <i class="caret"></i>
+   <br><ul class="menu" role="menu" id="advsubcategory_list">
+   </ul>
+</div>
+
+<div class="header">Местоположение объекта</div>
+<div class="divider"></div>
+<div id="location_alert" class="alert"></div>
+<div class="block_wrapper">
+   <label for="city_input" class="dropdown_label neccessary">*Город: </label><input class="dropdown_input neccesary_input" id="city_input" name="city_input" onfocus="newitem.fillCityList()" onkeyup="region.findCity('city_input','city_list')"/>
+   <i class="caret"></i>
+   <br><ul class="menu" role="menu" id="city_list">
+   </ul>
+   <div class="br_up"></div>
+   <br><label for="address_input">Адрес: </label><input id="address_input" maxlength=100 name="address_input" />
+</div>
+
+<div class="header">Личные данные</div>
+<div class="divider"></div>
+<div id="personal_data_alert" class="alert"></div>
+<div class="block_wrapper">
+   <label for="personal_status_input" class="neccesary">*Ваш статус: </label>
+   <input type="radio" name="personal_status_input" id="personal_status1_input" class="css-radio radGroup1" value="0" /><label for="personal_status1_input" class="css-label-radio css-label-radio2 radGroup1">Частное лицо</label>
+   <input type="radio" name="personal_status_input" id="personal_status2_input" class="css-radio radGroup1" value="1" /><label for="personal_status2_input" class="css-label-radio css-label-radio2 radGroup1">Компания</label>
+   <br><label for="name_input" class="neccesary">*Имя: </label><input id="name_input" class="neccesary_input" maxlength=100 name="name_input" />
+   <br><label for="phone_input" class="neccesary">*Номер телефона: </label><input id="phone_input" class="neccesary_input" maxlength=20 name="phone_input"  />
+   <input type="checkbox" class="css-checkbox" style="display:none" id="hidephone_check" /> <label for="hidephone_check" id="hidephone_check" class="css-label lite-gray-check">Скрыть</label>
+   <br><span id="email_exist_error_span" style="display:none;color:red;">Такой e-Mail уже существует! </span><a id="email_exits_auth_button" style="display: none;margin-right: 38px;" href="login.php">Авторизуйтесь</a>
+   <br><label id="email_input_label" for="email_input" class="neccesary">*Электронная почта: </label><input class="neccesary_input" onkeyup="checkEmailExist(this)" id="email_input" maxlength=100 name="email_input"   />
+   
+   <br><label for="skype_input">Skype: </label><input id="skype_input" maxlength=100 name="skype_input"   />
+</div>
+
+<div class="header">Срок размещения</div>
+<div class="divider"></div>
+<div id="period_alert" class="alert"></div>
+<div class="block_wrapper">
+   <label for="period_select">Срок размещения объявления: </label><select name="period_select" id="period_select">
+      <option selected="selected" value="604800">1 неделя</option>
+      <option value="2592000">1 месяц</option>
+      <option value="7776000">3 месяца</option>
+    </select>
+</div>
+
+

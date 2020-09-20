@@ -1,0 +1,44 @@
+<div class="header">Персональные данные</div>
+<div class="divider"></div>
+<div id="personal_alert" class="profile_alert"></div>
+<div class="profile_edit_block_wrapper">
+   <label for="name_input">Имя: </label><input id="profile_name_input" name="name_input" />
+   <br><label for="city_input" style="margin-bottom: -10px;">Город: </label><input style="margin-bottom: -10px;" id="profile_city_input" name="city_input" onfocus="profile.fillCityList()" onkeyup="region.findCity('profile_city_input','city_list')"/>
+   <i class="caret" style="margin: 19px 8px 18px -20px;opacity:0.5;"></i>
+   <br><ul class="menu" role="menu" id="city_list" style="min-width:236px;float:right;display:none; background:#fff;text-align:left;z-index:1000;position:absolute;margin-left:235px;margin-top:-10px;box-shadow:0 6px 8px rgba(0, 0, 0, 0.266);max-height:350px;">
+   </ul>
+   <div style="margin-bottom:-20px;"></div>
+   <br><label for="address_input">Адрес: </label><input id="profile_address_input" name="address_input" />
+   <br><label for="phone_input">Номер телефона: </label><input id="profile_phone_input" name="phone_input" />
+</div>
+<div class="profile_button_wrapper"><a onclick="profile.changePersonalData()" href="javascript:void(0)" class="btn transparent blue">Сохранить</a></div>
+
+<!--<div class="header">Привязка к социальным сетям</div>
+<div class="divider"></div>
+<div class="profile_button_wrapper">
+   <div name="socialAuthButtons" id="socialAuthButtons" class="social social-l" style="width:100%;margin-top:10px;height:45px">
+      <a id="vk_login_button" style="opacity: 0.2;" onclick="VK.Auth.login(coauthInfo);" href="javascript:void(0)" title="Вход с помощью Vkontakte" class="simpletooltip righttooltip pastelblue scl but-sp button dark-blue-b vk-icon socialbut insocial"><img class="rounded" src="/img/social-vk.gif"></a>
+      <a id="fb_login_button" style="opacity: 0.2;" href="#" title="Вход с помощью Facebook" class="simpletooltip righttooltip pastelblue scl but-sp button dark-navy-b fb-icon socialbut "><img class="rounded" src="/img/social-fb.gif"></a>
+      <a id="ok_login_button" style="opacity: 0.2;" href="#" title="Вход с помощью Odnoklassniki" class="simpletooltip righttooltip pastelblue scl but-sp button orange-b ok-icon socialbut "><img class="rounded" src="/img/social-ok.gif"></a>
+      <a id="mr_login_button" style="opacity: 0.2;" href="#" title="Вход с помощью Мой мир" class="simpletooltip righttooltip pastelblue scl but-sp button green-b mailru-icon socialbut "><img class="rounded" src="/img/social-mr.gif"></a>
+   </div>
+</div>-->
+
+<div class="header passblock">Изменение пароля</div>
+<div class="divider passblock"></div>
+<div id="password_alert" class="profile_alert"></div>
+<div class="profile_edit_block_wrapper passblock">
+   <label for="oldpass_input">Старый пароль: </label><input id="profile_oldpasswd_input" maxlength=20 type="password" name="oldpass_input" />
+   <br><label for="newpass_input">Новый пароль: </label><input id="profile_newpasswd_input" maxlength=20 type="password" name="newpass_input" />
+   <br><label for="newpassagain_input">И еще раз: </label><input id="profile_newpasswdagain_input" maxlength=20 type="password" name="newpassagain_input"   />
+</div>
+<div class="profile_button_wrapper passblock"><a href="javascript:void(0)" onclick="profile.changeUserPasswd()" class="btn transparent blue">Изменить пароль</a></div>
+
+<div class="header emailblock">Изменение электронного адреса</div>
+<div class="divider emailblock"></div>
+<div id="email_alert" class="profile_alert"></div>
+<div class="profile_edit_block_wrapper emailblock">
+   <label for="oldemail_input">Старый E-Mail: </label><input id="profile_oldemail_input" name="oldemail_input" disabled="disabled"/>
+   <br><label for="newemail_input">Новый E-Mail: </label><input id="profile_newemail_input" name="newemail_input" />
+</div>
+<div class="profile_button_wrapper emailblock"><a onclick="profile.changeUserEmail()" href="javascript:void(0)" class="btn transparent blue">Изменить адрес</a></div>

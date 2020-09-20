@@ -1,0 +1,61 @@
+<style>
+ul.menu {
+   background: #fff none repeat scroll 0 0;
+   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.267);
+   display: none;
+   margin-top: -10px;
+   max-height: 350px;
+   width: 40%;
+   overflow-y: scroll;
+   position: absolute;
+   text-align: left;
+   z-index: 1000;
+}
+
+ul.menu li{
+   padding:10px 15px 10px 15px;
+   
+   margin:0 !important;
+}
+
+ul.menu li:hover{
+   cursor:pointer;
+   background:#eee;
+   text-decoration:none;
+   color:#555;
+}
+
+ul.menu li a{
+   text-decoration:none;
+   color:#999;
+}
+</style>
+<div class="header_centered">Пополнение баланса</div>
+<div class="divider"></div>
+<div id="header_wrapper_div" style="margin-top:20px; text-align: center; width: 100%;">
+   Здесь Вы можете купить за деньги баллы, на которые затем продвигать свои объявления.
+</div>
+<div id="input_wrapper_div" style="margin-top:20px;" class="profile_edit_block_wrapper">
+   <label for="profile_coins_to_fill_input">Количество баллов: </label><input id="profile_coins_to_fill_input" name="profile_coins_to_fill_input" />
+</div>
+<div class="profile_button_wrapper"><a onclick="profile.createPayment()" href="javascript:void(0)" class="btn transparent blue">Пополнить</a></div>
+<div id="check_wrapper_div" style="display:none;margin-top:20px">
+   <label for="coins_to_fill_span">Баллов к пополнению: </label>&nbsp;<span id="coins_to_fill_span"></span>
+   <br><label for="money_to_get_span">Денег к списанию: </label>&nbsp;<span id="money_to_get_span"></span> шекелей
+</div>
+<div id="result_wrapper_div" style="display:none;margin-top:20px">
+   <span id="payment_result_span"></span>
+   <br><a id="result_callback_button" href="javascript:void(0)" onclick="profile.credits()" class="btn transparent blue">История платежей</a>
+</div>
+<form style="display:none;" id="payment_form" name="payment" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
+	<input type="hidden" name="ik_co_id" value="592bcf333b1eaf7f6f8b456c" />
+	<input id="ik_pm_no" type="hidden" name="ik_pm_no" value="" />
+        <input id="ik_am" type="hidden" name="ik_am" />
+	<input type="hidden" name="ik_cur" value="RUB" />
+	<input type="hidden" name="ik_desc" value="Event Description" />
+        <input type="hidden" name="ik_suc_u" value="http://1shekel.com/checkout.php" />
+        <input type="hidden" name="ik_fal_u" value="http://1shekel.com/checkout.php" />
+        <input type="hidden" name="ik_pnd_u" value="http://1shekel.com/checkout.php" />
+        <input type="hidden" name="ik_suc_m" value="post" />
+        <input id="payment_form_submit" disabled="" style="margin: 15px 0;width: 40%;" type="submit" class="btn transparent orange" value="Оплатить">
+</form>

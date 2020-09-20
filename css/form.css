@@ -1,0 +1,27 @@
+.form{
+   padding: 1px 20px 0 20px; 
+   text-align: left; 
+   margin-left: auto; 
+   margin-right: auto;
+   z-index: 9999; 
+   background: #fff;
+}
+
+.form .header {
+   font-weight: bold;
+   margin: 15px 0 15px;
+   opacity: 1 !important;
+}
+
+.form_header_wrapper{
+   font-size: 2.3em;
+}
+
+#form_content{
+   font-size: 2.3em;
+}
+
+.close_icon_img{
+   float: right; 
+   height: 25px;
+}
